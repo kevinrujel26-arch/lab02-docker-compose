@@ -1,6 +1,22 @@
+version: "3"
+
 services:
+
   api01:
-    image: nmatsui/hello-world-api
     container_name: api01
+    build: ./api
+    environment:
+      - MESSAGE="Kevin Rujel"
+    ports:
+      - "3000:3000"
+
+
+  api02:
+    container_name: api02
+    build: ./api
+    environment:
+      - MESSAGE="Kevin Rujel"
     ports:
       - "3001:3000"
+
+  
